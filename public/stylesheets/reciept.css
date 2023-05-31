@@ -1,0 +1,21 @@
+*{
+  font-family: 'Courier New', Courier, monospace;
+
+}
+body{
+  /* font-family: 'Courier New', Courier, monospace; */
+  background-repeat:no-repeat ;
+  background-size: cover;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Sree_Padmanabha_Swami_temple.jpg');
+  margin-top: 200px; 
+}
+.head{
+  font-weight: bold;
+  font-size: 500px;
+  margin-left: 360px;
+  color: red;
+}
+.btn-right{
+  align-items: center;
+  margin-left: 500px;
+}

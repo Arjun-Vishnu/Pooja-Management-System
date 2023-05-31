@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css')
+    
+  script(src='https://code.jquery.com/jquery-3.6.4.js', integrity='sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=', crossorigin='anonymous')
+   
+  script(src='https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js')
+  
+  table#productsTable.table.mt-5
+    thead
+      tr 
+        th.he  #{title}
+    tbody 
+      each pooja, i in poojas 
+        tr 
+          td.list-group-item  
+             h3.style(style='font-size:20px; font-weight:bold;')=pooja.name        
+              a.btn.btn-danger.btn-right(href='/delete/'+pooja._id, onclick="return confirm('Are you sure?')") Delete
+              a.btn.btn-success.btn-right.mx-3(href='/view/'+pooja._id) Details
+               a.btn.btn-info.btn-right.mb-3(href='/book/add/'+pooja._id) Book
+            
+  script.
+    $(document).ready(function () {
+      $('#productsTable').DataTable();
+    });

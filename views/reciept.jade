@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div.container.border.border-info.text-white.mt-5
+    h1.head Order Receipt
+      table.hover
+        tr
+          th Name:
+          td= book.name
+        tr
+          th Star:
+          td= book.star
+        tr
+          th Pooja:
+          td= book.poojaName
+        tr
+          th Total Amount:
+          td= book.price
+
+  button.btn.btn-info.ms-5(onclick='window.print()') Print 

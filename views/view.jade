@@ -1,0 +1,11 @@
+extend layout
+
+block content
+    h1.text-info.mt-5 #{pooja.name}
+    p.text-success #{pooja.details}
+    h3.text-danger #{pooja.price}
+     hr
+    a.btn.btn-success.ms-5(href='/view/edit/'+pooja._id) Edit
+
+    
+    
